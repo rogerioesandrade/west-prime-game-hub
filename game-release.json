@@ -1,0 +1,84 @@
+{
+  "version": "1.1.2",
+  "tag": "nr13-v1.1.2",
+  "asset": "WG_NR13_SCORM12_CELULAR_COMPUTADOR_v1.1.2.zip",
+  "bytes": 353536208,
+  "sha256": "163fdb5e43bd27684056ecb11da9075618675c9b78b3c2fbbe2463b4f621d2a6",
+  "files": [
+    {
+      "path": "Desktop/Build/Desktop.data.unityweb",
+      "bytes": 251796947,
+      "sha256": "6559d0a84b6419cb2fed100b0413b4e52d3e2e61ad5a6783b04ea5d05361cfc9"
+    },
+    {
+      "path": "Desktop/Build/Desktop.framework.js.unityweb",
+      "bytes": 75119,
+      "sha256": "6b846e1979e29db5decbcc2c3642c3506a040b4daf8ae6d81ba77737e42f3e1d"
+    },
+    {
+      "path": "Desktop/Build/Desktop.loader.js",
+      "bytes": 48779,
+      "sha256": "55511635a329b6213205f2e346f1a87d43406397d1f121fe2e4f9e660e6489f9"
+    },
+    {
+      "path": "Desktop/Build/Desktop.wasm.unityweb",
+      "bytes": 9778785,
+      "sha256": "0a544680396c345aea3a2ff9e0bdd83be22a97a934d409d7d494fd8a144f3155"
+    },
+    {
+      "path": "index.html",
+      "bytes": 12274,
+      "sha256": "2b93c411598492e2b829d03c71b6d44d3de649b96b89f1d2dd5fd6ff7694ea64"
+    },
+    {
+      "path": "menu.png",
+      "bytes": 2693910,
+      "sha256": "67911a5a61ed32b1560d9afa8f5488def88ca01d10290c5d8220bc2f6a5a7e45"
+    },
+    {
+      "path": "Mobile/Build/Mobile.data.unityweb",
+      "bytes": 80191024,
+      "sha256": "62c194188eb3d796c7566a47d37670fc4b1b12292fd36d32791702e837fe21b4"
+    },
+    {
+      "path": "Mobile/Build/Mobile.framework.js.unityweb",
+      "bytes": 75119,
+      "sha256": "6b846e1979e29db5decbcc2c3642c3506a040b4daf8ae6d81ba77737e42f3e1d"
+    },
+    {
+      "path": "Mobile/Build/Mobile.loader.js",
+      "bytes": 48779,
+      "sha256": "55511635a329b6213205f2e346f1a87d43406397d1f121fe2e4f9e660e6489f9"
+    },
+    {
+      "path": "Mobile/Build/Mobile.wasm.unityweb",
+      "bytes": 9778785,
+      "sha256": "0a544680396c345aea3a2ff9e0bdd83be22a97a934d409d7d494fd8a144f3155"
+    },
+    {
+      "path": "mobile.css",
+      "bytes": 5062,
+      "sha256": "7bc626fa860e8af02eb15a1de1f01948198371c1eed8c625c6b2725ef4f1568f"
+    },
+    {
+      "path": "scorm.js",
+      "bytes": 4095,
+      "sha256": "8835b532a9b8857cf7d49aab6238dbfc861b8e8102c9abc143d748817d0d0e04"
+    },
+    {
+      "path": "style.css",
+      "bytes": 1885,
+      "sha256": "f3dd8d3a451d8ba2cc8c8fbf614e12d57ae4f4a824e7c293ed86409e319484e6"
+    },
+    {
+      "path": "touch.js",
+      "bytes": 3398,
+      "sha256": "b358b0135693b19f2fb9ac54147e70a13c2d7b9ce28345749ab63d29327e22a1"
+    },
+    {
+      "path": "imsmanifest.xml",
+      "bytes": 1471,
+      "sha256": "133a1fc5babc26451391175d07d06343f53442b1f76c8e0fd49ae413cc77ddac"
+    }
+  ]
+}

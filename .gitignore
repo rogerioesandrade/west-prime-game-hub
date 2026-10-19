@@ -1,0 +1,9 @@
+dist/
+.cache/
+qa/
+__pycache__/
+.env*
+*.zip
+*.unityweb
+.DS_Store
+Thumbs.db

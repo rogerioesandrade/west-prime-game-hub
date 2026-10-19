@@ -1,0 +1,57 @@
+name: Publicar West Prime Game HUB
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/configure-pages@v5
+      - name: Baixar o pacote aprovado do simulador
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p .cache
+          tag=$(python -c "import json; print(json.load(open('game-release.json'))['tag'])")
+          asset=$(python -c "import json; print(json.load(open('game-release.json'))['asset'])")
+          gh release download "$tag" --pattern "$asset" --dir .cache
+      - name: Montar e validar o site
+        run: |
+          asset=$(python -c "import json; print(json.load(open('game-release.json'))['asset'])")
+          python scripts/build.py --game-zip ".cache/$asset"
+          python scripts/validate.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
