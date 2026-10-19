@@ -2,7 +2,7 @@
 
 Site de demonstração West Group, preparado para **rogerioesandrade/west-prime-game-hub** no GitHub Pages. Inclui o Simulador NR-13 1.1.2 com seleção Celular/Computador, idiomas PT/EN/ES, controles de toque e progresso local no navegador.
 
-Endereço previsto após a publicação: https://rogerioesandrade.github.io/west-prime-game-hub/
+Site: https://rogerioesandrade.github.io/west-prime-game-hub/
 
 ## Organização
 
@@ -18,10 +18,12 @@ O pacote pesado do Unity pertence a uma **GitHub Release**, não ao histórico G
 1. Criar o repositório público `rogerioesandrade/west-prime-game-hub` e enviar estes arquivos para a branch `main`.
 2. Em **Settings → Pages → Build and deployment**, escolher **GitHub Actions**.
 3. Criar a release `nr13-v1.1.2` com o arquivo original `WG_NR13_SCORM12_CELULAR_COMPUTADOR_v1.1.2.zip` anexado. Publicar a release após concluir o upload.
-4. Em **Actions → Publicar West Prime Game HUB**, acompanhar a execução. Se a release foi criada por automação, usar **Run workflow** após o upload.
+4. Em **Actions → Publicar West Prime Game HUB**, usar **Run workflow**, selecionando `main`, após o upload da release.
 5. Abrir o endereço retornado pelo deploy e testar o início do jogo nos dois perfis.
 
 Um push inicial antes da configuração do Pages e do upload da release pode falhar. Execute novamente o fluxo depois desses dois passos. Não envie a pasta `dist` nem o ZIP como arquivos Git.
+
+Atualizações na branch `main` publicam automaticamente. A release armazena os binários; o site é publicado sempre a partir de `main`, respeitando a proteção do ambiente `github-pages`. Para uma nova versão do jogo, anexe primeiro o ZIP à release correspondente, atualize `game-release.json` e o wrapper e envie a alteração para `main`. Após anexar um pacote que estava pendente, execute o fluxo manualmente.
 
 ## Prévia local
 
