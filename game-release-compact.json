@@ -1,0 +1,89 @@
+{
+  "version": "2.1.0",
+  "tag": "nr13-compacto-v2.1.0",
+  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.0.zip",
+  "bytes": 113946919,
+  "sha256": "6ebd119e9925e990af25e0f782dd383a3ee919ab1fed6d7b06f3a90b5314cd5f",
+  "files": [
+    {
+      "path": "Creditos.txt",
+      "bytes": 865,
+      "sha256": "c22fdbae8a75d81c6332993ff4fb4e793448d356062faba461e95996c219e7b7"
+    },
+    {
+      "path": "Desktop/Build/Desktop.data.unityweb",
+      "bytes": 51857807,
+      "sha256": "6eaf09ea5743da3113e4b88f261ba7e175179f0a564e2c1ae9e6449cbc938268"
+    },
+    {
+      "path": "Desktop/Build/Desktop.framework.js.unityweb",
+      "bytes": 84444,
+      "sha256": "6a6ef3a5e68563602d74ce1f454b5aa48e011dce0cfd87c765383a3e4ba39bdf"
+    },
+    {
+      "path": "Desktop/Build/Desktop.loader.js",
+      "bytes": 48540,
+      "sha256": "c64ac9165c22de1fe2c407ee5f11b5f61473c5b24b91e01f5477aceb1b5a5c20"
+    },
+    {
+      "path": "Desktop/Build/Desktop.wasm.unityweb",
+      "bytes": 11118825,
+      "sha256": "d8f611110001b92d93ee29350177040782e645a4f8dcbb4bd5724aedc6139929"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 268,
+      "sha256": "042194634f03bc0b61b51c57c1e881e23ec1420c220afd978c95a6bfea940e11"
+    },
+    {
+      "path": "imsmanifest.xml",
+      "bytes": 1278,
+      "sha256": "7ee3aa31ec3d1469d1f4e1bfefb42c04e754b23b294e9ddc194e8a919cda64e4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1442,
+      "sha256": "8da9685b2d593cc2d9e18c3bbcf9dc336bbaa6b1fa5feb3f43bf92a48330b5bb"
+    },
+    {
+      "path": "Mobile/Build/Mobile.data.unityweb",
+      "bytes": 40352120,
+      "sha256": "d073fcdd90eaad2fd0979937eae8462d6493ae34893f3810f6b42546f7fad876"
+    },
+    {
+      "path": "Mobile/Build/Mobile.framework.js.unityweb",
+      "bytes": 84444,
+      "sha256": "2d95d0c4a8707d990ee9b35b7ba8ee33170ffd44c508841e52aba3d6c2ae667d"
+    },
+    {
+      "path": "Mobile/Build/Mobile.loader.js",
+      "bytes": 48540,
+      "sha256": "a346ddae2c159145df5427d3effb7b928dc0e869ac19248ab8c688f21d8336e3"
+    },
+    {
+      "path": "Mobile/Build/Mobile.wasm.unityweb",
+      "bytes": 11120170,
+      "sha256": "73d219cd0c9cbc3c7c41c4f897afdc8d4d744c108c95f318bfa4b48bdd666971"
+    },
+    {
+      "path": "release.css",
+      "bytes": 2004,
+      "sha256": "3dd21e6a8749c1af238656022eda59ac9d1454a97b66718f49ff854a2a7f4ed2"
+    },
+    {
+      "path": "release.js",
+      "bytes": 5205,
+      "sha256": "d3b2343282751ee261f135431d24ac2ae7907c66cdfd0ede5e1851440d0ccc6a"
+    },
+    {
+      "path": "scorm.js",
+      "bytes": 4278,
+      "sha256": "e2c4989723259d8a4c096b5efd46f7f5982082f6b1fe69025d69338cc81f5b56"
+    },
+    {
+      "path": "Unity_Companion_License_Passos.txt",
+      "bytes": 211698,
+      "sha256": "8248b3bd78e2fd42f218ec2810b76c894a59fc4a427c217e838855a37589ac9a"
+    }
+  ]
+}

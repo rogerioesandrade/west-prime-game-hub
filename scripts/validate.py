@@ -51,3 +51,12 @@ for info in manifest['files']:
             assert hashlib.file_digest(stream, 'sha256').hexdigest() == info['sha256'], target
 assert (DIST / '.nojekyll').exists()
 print('PASS: links, caminhos relativos, recursos e independência da hospedagem anterior.')
+
+compact=json.loads((ROOT/'game-release-compact.json').read_text(encoding='utf-8'))
+assert json.loads((DIST/'nr13-compacto-ready.json').read_text())['ready']
+for info in compact['files']:
+    target=DIST/'scorm/nr13-compacto'/('v'+compact['version'])/info['path']
+    assert target.stat().st_size==info['bytes']
+    with target.open('rb') as stream: assert hashlib.file_digest(stream,'sha256').hexdigest()==info['sha256']
+assert (DIST/'jogar/nr13-compacto/index.html').exists()
+print('PASS: segunda versão compacta e integridade de todos os seus arquivos.')

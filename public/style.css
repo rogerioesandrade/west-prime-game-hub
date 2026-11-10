@@ -7,3 +7,5 @@
 .card-photo{background-size:auto 165%;background-position:right center}
 @media(min-width:761px){.hero-photo{left:38%;background-size:auto 145%;background-position:right 40%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.simulator + .simulator{margin-top:28px}

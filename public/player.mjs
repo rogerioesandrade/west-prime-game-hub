@@ -1,6 +1,7 @@
 import { createScorm12Runtime } from './scorm-runtime.mjs';
 // A nova sequência tem um progresso independente da versão anterior.
-const key='west-prime:nr13:v2.0.0';
+const compact=location.pathname.includes('/nr13-compacto/');
+const key=compact?'west-prime:nr13-compacto:v2.1.0':'west-prime:nr13:v2.0.0';
 const $=id=>document.getElementById(id);
 let frame=null,runtime=null,timer=null,checking=false,pausedForLeave=false;
 function save(values){
@@ -19,8 +20,8 @@ function prepareRuntime(reset=false){
 }
 async function check(){
  if(checking||frame)return;checking=true;clearTimeout(timer);$('retry').hidden=true;
- try {const response=await fetch(new URL('./nr13-ready.json',import.meta.url),{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw new Error('Unavailable');const data=await response.json();if(!data.ready)throw new Error('Not ready');
-  frame=document.createElement('iframe');frame.src=new URL('./scorm/nr13/v2.0.0/index.html',import.meta.url).href;frame.title='Simulador NR-13 — escolha celular ou computador';frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.addEventListener('load',()=>{$('loading').hidden=true});$('stage').append(frame);
+ try {const response=await fetch(new URL(compact?'./nr13-compacto-ready.json':'./nr13-ready.json',import.meta.url),{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw new Error('Unavailable');const data=await response.json();if(!data.ready)throw new Error('Not ready');
+  frame=document.createElement('iframe');frame.src=new URL(compact?'./scorm/nr13-compacto/v2.1.0/index.html':'./scorm/nr13/v2.0.0/index.html',import.meta.url).href;frame.title='Simulador NR-13 — escolha celular ou computador';frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.addEventListener('load',()=>{$('loading').hidden=true});$('stage').append(frame);
  }catch {$('loading-message').textContent='O simulador ainda não está disponível. Tentando novamente…';$('retry').hidden=false;timer=setTimeout(check,10000);}
  finally{checking=false;}
 }

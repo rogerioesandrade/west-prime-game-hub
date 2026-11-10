@@ -28,7 +28,7 @@ def verify_archive(archive, manifest):
             if hashlib.file_digest(stream, 'sha256').hexdigest() != wanted['sha256']:
                 raise ValueError('SHA256 divergente: ' + name)
 
-def build(package):
+def build(package, compact_package):
     manifest = json.loads((ROOT / 'game-release.json').read_text(encoding='utf-8'))
     package = package.resolve()
     if package.stat().st_size != manifest['bytes'] or sha256(package) != manifest['sha256']:
@@ -41,6 +41,15 @@ def build(package):
         game = dist / 'scorm/nr13' / ('v' + manifest['version'])
         game.mkdir(parents=True)
         archive.extractall(game)
+    compact = json.loads((ROOT / 'game-release-compact.json').read_text(encoding='utf-8'))
+    if compact_package.stat().st_size != compact['bytes'] or sha256(compact_package) != compact['sha256']:
+        raise ValueError('Pacote compacto divergente.')
+    with zipfile.ZipFile(compact_package) as archive:
+        verify_archive(archive, compact)
+        compact_game = dist / 'scorm/nr13-compacto' / ('v' + compact['version'])
+        compact_game.mkdir(parents=True)
+        archive.extractall(compact_game)
+    (dist / 'nr13-compacto-ready.json').write_text(json.dumps({'ready': True, 'version': compact['version'], 'sha256': compact['sha256']}) + '\n', encoding='utf-8')
     # The approved HUB wrapper adds the local demonstration runtime and exit copy.
     # Unity binary files are copied unchanged from the approved release.
     shutil.copytree(ROOT / 'public', dist, dirs_exist_ok=True)
@@ -60,5 +69,6 @@ def build(package):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--game-zip', required=True, type=Path)
+    parser.add_argument('--compact-zip', required=True, type=Path)
     args = parser.parse_args()
-    build(args.game_zip)
+    build(args.game_zip, args.compact_zip)

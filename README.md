@@ -1,6 +1,6 @@
 # West Group GAME HUB
 
-Publicação de demonstração do **Galpão NR13 2.0.0**, para teste e aprovação. Treinamento consolidado com seis missões e dois perfis WebGL no mesmo pacote SCORM 1.2.
+Duas publicações de demonstração para teste e aprovação: **NR13 — PC + Smartphone (2.0.0)** e **NR13 — PC + Smartphone Compacto (2.1.0)**. Cada jogo tem seis missões e dois perfis WebGL no seu pacote SCORM 1.2.
 
 Site: https://rogerioesandrade.github.io/west-prime-game-hub/
 
@@ -25,7 +25,7 @@ Para atualizar: publicar primeiro o ZIP na release, atualizar o manifesto e envi
 
 ## Prévia local
 
-    python scripts/build.py --game-zip /caminho/WG_NR13_GALPAO_SCORM12_PC_SMARTPHONE_v2.0.0.zip
+    python scripts/build.py --game-zip /caminho/WG_NR13_GALPAO_SCORM12_PC_SMARTPHONE_v2.0.0.zip --compact-zip /caminho/WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.0.zip
     python scripts/validate.py
     python -m http.server 8080 --directory dist
 
@@ -44,3 +44,13 @@ Foram conferidos compilação, execução WebGL, caminhada, equipamentos, retoma
 Os créditos e avisos aplicáveis acompanham o pacote e o menu Sobre. A publicação compilada não concede licença de redistribuição dos ativos de terceiros.
 
 O site é público e destinado a demonstração, sem pagamentos ou autenticação de alunos. Monitorar armazenamento e tráfego antes de ampliar a distribuição. Referência: [limites do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
+
+## Versão compacta
+
+A versão 2.0.0 permanece intacta em jogar/nr13/. A compacta abre em jogar/nr13-compacto/, com progresso independente, manifesto game-release-compact.json e release nr13-compacto-v2.1.0. A publicação do Pages baixa e verifica os dois pacotes; nenhuma versão substitui a outra.
+
+Na compacta, texturas de cenário têm limites próprios por perfil; placas, manômetros, menus e logotipos são protegidos. O mapa de acabamento da pele é reduzido e comprimido a partir do original. Malhas estáticas usam compressão de armazenamento, sem alteração de topologia, rig ou posicionamento. Recursos exclusivos do editor ficam fora do pacote. O personagem mantém quatro pesos por vértice. Todos os canais de material utilizados permanecem presentes.
+
+A cena original e os binários da versão atual não foram alterados. A avaliação de carregamento é feita com navegador novo e rede simulada; não equivale a medição em smartphone físico.
+
+Na versão compacta, Andar rápido fica à direita; Interagir fica ao lado do controle de caminhada. O botão móvel Pular foi removido e o eixo vertical do toque foi corrigido. Toque alterna a caminhada rápida; segurar mantém o sprint.

@@ -31,10 +31,14 @@ jobs:
           tag=$(python -c "import json; print(json.load(open('game-release.json'))['tag'])")
           asset=$(python -c "import json; print(json.load(open('game-release.json'))['asset'])")
           gh release download "$tag" --pattern "$asset" --dir .cache
+          tag=$(python -c "import json; print(json.load(open('game-release-compact.json'))['tag'])")
+          asset=$(python -c "import json; print(json.load(open('game-release-compact.json'))['asset'])")
+          gh release download "$tag" --pattern "$asset" --dir .cache
       - name: Montar e validar o site
         run: |
           asset=$(python -c "import json; print(json.load(open('game-release.json'))['asset'])")
-          python scripts/build.py --game-zip ".cache/$asset"
+          compact=$(python -c "import json; print(json.load(open('game-release-compact.json'))['asset'])")
+          python scripts/build.py --game-zip ".cache/$asset" --compact-zip ".cache/$compact"
           python scripts/validate.py
       - uses: actions/upload-pages-artifact@v4
         with:
