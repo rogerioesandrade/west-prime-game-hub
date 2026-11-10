@@ -1,6 +1,6 @@
 # West Group GAME HUB
 
-Duas publicações de demonstração para teste e aprovação: **NR13 — PC + Smartphone (2.0.0)** e **NR13 — PC + Smartphone Compacto (2.1.0)**. Cada jogo tem seis missões e dois perfis WebGL no seu pacote SCORM 1.2.
+Duas publicações de demonstração para teste e aprovação: **NR13 — PC + Smartphone (2.0.0)** e **NR13 — PC + Smartphone Compacto (2.1.1)**. Cada jogo tem seis missões e dois perfis WebGL no seu pacote SCORM 1.2.
 
 Site: https://rogerioesandrade.github.io/west-prime-game-hub/
 
@@ -25,7 +25,7 @@ Para atualizar: publicar primeiro o ZIP na release, atualizar o manifesto e envi
 
 ## Prévia local
 
-    python scripts/build.py --game-zip /caminho/WG_NR13_GALPAO_SCORM12_PC_SMARTPHONE_v2.0.0.zip --compact-zip /caminho/WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.0.zip
+    python scripts/build.py --game-zip /caminho/WG_NR13_GALPAO_SCORM12_PC_SMARTPHONE_v2.0.0.zip --compact-zip /caminho/WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.1.zip
     python scripts/validate.py
     python -m http.server 8080 --directory dist
 
@@ -47,10 +47,13 @@ O site é público e destinado a demonstração, sem pagamentos ou autenticaçã
 
 ## Versão compacta
 
-A versão 2.0.0 permanece intacta em jogar/nr13/. A compacta abre em jogar/nr13-compacto/, com progresso independente, manifesto game-release-compact.json e release nr13-compacto-v2.1.0. A publicação do Pages baixa e verifica os dois pacotes; nenhuma versão substitui a outra.
+A versão 2.0.0 permanece intacta em jogar/nr13/. A compacta abre em jogar/nr13-compacto/, com progresso independente, manifesto game-release-compact.json e release nr13-compacto-v2.1.1. A publicação do Pages baixa e verifica os dois pacotes; nenhuma versão substitui a outra.
 
 Na compacta, texturas de cenário têm limites próprios por perfil; placas, manômetros, menus e logotipos são protegidos. O mapa de acabamento da pele é reduzido e comprimido a partir do original. Malhas estáticas usam compressão de armazenamento, sem alteração de topologia, rig ou posicionamento. Recursos exclusivos do editor ficam fora do pacote. O personagem mantém quatro pesos por vértice. Todos os canais de material utilizados permanecem presentes.
 
 A cena original e os binários da versão atual não foram alterados. A avaliação de carregamento é feita com navegador novo e rede simulada; não equivale a medição em smartphone físico.
 
 Na versão compacta, Andar rápido fica à direita; Interagir fica ao lado do controle de caminhada. O botão móvel Pular foi removido e o eixo vertical do toque foi corrigido. Toque alterna a caminhada rápida; segurar mantém o sprint.
+
+### Revisão 2.1.1
+Captura do mouse no PC com recuperação por clique após perda de foco; lente dos instrumentos com mistura alfa coerente; ronda com trajetos encurtados após verificar piso e passagem; orientação ao passar pelas setas; pulsos nas bordas dos comandos de progresso. Textos não recebem escala animada. O progresso compacto mantém a chave da 2.1.0 para permitir retomada, sem apagar a sessão anterior.
