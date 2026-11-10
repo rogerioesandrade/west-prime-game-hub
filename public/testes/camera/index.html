@@ -1,0 +1,7 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Teste de câmera | West Prime GAME HUB</title><link rel="stylesheet" href="camera.css"><link rel="icon" href="../../favicon.svg"></head><body>
+<canvas id="scene" tabindex="0" aria-label="Ambiente de teste da câmera em terceira pessoa"></canvas>
+<header><a href="../../">← GAME HUB</a><span>LABORATÓRIO · CÂMERA PC</span><button id="pause">Pausar · ESC</button></header>
+<div id="hud"><strong id="status" role="status">PAUSADO</strong><span id="turns">Giro acumulado: 0°</span><small>W A S D · caminhar &nbsp; | &nbsp; Mouse · olhar</small></div>
+<div id="crosshair" hidden>+</div>
+<section id="overlay"><article><small>WEST GROUP · TESTE ISOLADO</small><h1>Câmera sem bordas</h1><p>Gire o mouse várias vezes na mesma direção. O personagem e as referências ajudam a perceber o movimento.</p><p><b>ESC</b> libera o cursor e pausa. Para voltar, clique em <b>Retomar teste</b>.</p><label>Sensibilidade <input id="sensitivity" type="range" min="0.04" max="0.25" step="0.01" value="0.10"><output id="value">0,10</output></label><button id="start">INICIAR TESTE</button><button id="fullscreen">Tela cheia (opcional)</button><p id="message" role="status">Teste leve para PC com mouse. Não carrega o simulador nem altera seu progresso.</p><small>Protótipo independente do Unity: valida o comportamento do mouse antes da integração.</small></article></section>
+<script src="camera.js"></script></body></html>
