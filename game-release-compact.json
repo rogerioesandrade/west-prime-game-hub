@@ -1,9 +1,9 @@
 {
-  "version": "2.1.1",
-  "tag": "nr13-compacto-v2.1.1",
-  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.1.zip",
-  "bytes": 113950733,
-  "sha256": "a15a2d5f14012447d015929e3f2ef944a00534417d75dd077d76f2b746fb4478",
+  "version": "2.1.2",
+  "tag": "nr13-compacto-v2.1.2",
+  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.2.zip",
+  "bytes": 113960272,
+  "sha256": "853d3fe98414cb4ceaa93ac0accab2fe9327863eb2b995d769d8f28a32d6147f",
   "files": [
     {
       "path": "Creditos.txt",
@@ -12,23 +12,23 @@
     },
     {
       "path": "Desktop/Build/Desktop.data.unityweb",
-      "bytes": 51856609,
-      "sha256": "5de86e3619db48dd4058dcbb7556e963963f51a74c3c2b8b1174f21faa4a0cb2"
+      "bytes": 51863476,
+      "sha256": "535bff023e005694e5b63f977e6a766e88f08115488a4a6a405c6e3309961be9"
     },
     {
       "path": "Desktop/Build/Desktop.framework.js.unityweb",
-      "bytes": 84444,
-      "sha256": "5901a37c8d6bc7a5939f680efc9c8b10b171377e6f3209c5b3e4ebf0d50cc461"
+      "bytes": 84491,
+      "sha256": "a7761560016d20565b3efcc3323d7a234353fb99414ddd0e5fcf7533673c4a89"
     },
     {
       "path": "Desktop/Build/Desktop.loader.js",
       "bytes": 48540,
-      "sha256": "a929fd9ab885269161c6e3d98f6895cdd7d5d05c47b0f87644bb702a57667fed"
+      "sha256": "a46b5e9f3bf26f7d17823bd2d1bf22e64e74aa5c43846f52a8ec5b233a60bc9c"
     },
     {
       "path": "Desktop/Build/Desktop.wasm.unityweb",
-      "bytes": 11120358,
-      "sha256": "ce9768ffe6152b798daff0661c3fe818b337f316d3e4a583f5025808f0509d85"
+      "bytes": 11123224,
+      "sha256": "10436944a13eee53647acdc0271a551df88b7c93b605a7617cc18ae34cf81466"
     },
     {
       "path": "favicon.svg",
@@ -38,7 +38,7 @@
     {
       "path": "imsmanifest.xml",
       "bytes": 1278,
-      "sha256": "65f8282925f0a6017583436f0acbf5bba4c9a740ab629b4c5e5a439e67fd7399"
+      "sha256": "84f1d416ab7283f42522ca2f74513eb35d63b3cdafe9a39f1a7e9cc96eae90b9"
     },
     {
       "path": "index.html",
@@ -73,7 +73,7 @@
     {
       "path": "release.js",
       "bytes": 6207,
-      "sha256": "142615ec47a9515d700c179b4b88f6c8d930f07461f8e60f5cea4abf69e6ea89"
+      "sha256": "2ac0d2b13552e4261b84c7022621eb57d8d3e18e523f34011177afc9a1fda674"
     },
     {
       "path": "scorm.js",
