@@ -1,13 +1,14 @@
 /* West Group — independent test scene, no external assets or runtime dependencies. */
 'use strict';
 const $=id=>document.getElementById(id),canvas=$('scene'),ctx=canvas.getContext('2d');
-let locked=false,started=false,yaw=0,pitch=.03,total=0,x=0,z=0,bodyYaw=0,sensitivity=.10,previous=performance.now(),active=null,noticeUntil=0;
+let locked=false,started=false,yaw=0,pitch=.03,total=0,x=0,z=0,bodyYaw=0,sensitivity=.10,previous=performance.now(),active=null,noticeUntil=0,cameraDistance=2.7,targetDistance=2.7;
 const objects=[{name:'PAINEL A',p:[.8,1.15,3.2],s:[.9,1.4,.5],interactive:true,on:false},{name:'PAINEL B',p:[-3,1.15,1],s:[.9,1.4,.5],interactive:true,on:false},{name:'BARREIRA',p:[-2,1,-1],s:[1.3,2,.35],interactive:false}];
 for(const [px,pz,color] of [[0,10,'#0288d1'],[10,0,'#ff8800'],[0,-10,'#2e9d92'],[-10,0,'#b39136']])objects.push({p:[px,1.1,pz],s:[1,2.2,1],color,interactive:false});
 function rayBox(origin,dir,obj){let near=0,far=100;for(let i=0;i<3;i++){const lo=obj.p[i]-obj.s[i]/2,hi=obj.p[i]+obj.s[i]/2;if(Math.abs(dir[i])<1e-7){if(origin[i]<lo||origin[i]>hi)return null;}else{let a=(lo-origin[i])/dir[i],b=(hi-origin[i])/dir[i];near=Math.max(near,Math.min(a,b));far=Math.min(far,Math.max(a,b));if(near>far)return null;}}return near;}
 function interact(){if(!locked||!active)return;active.on=!active.on;$('action').textContent=active.name+(active.on?' · LIGADO':' · DESLIGADO');noticeUntil=performance.now()+1400;}
 document.addEventListener('mousedown',e=>{if(e.button===0)interact();});
 const keys=new Set();
+canvas.addEventListener('wheel',e=>{if(!locked)return;e.preventDefault();targetDistance=Math.max(2.2,Math.min(4.2,targetDistance+Math.sign(e.deltaY)*.25));},{passive:false});
 function syncLock(){locked=document.pointerLockElement===canvas;keys.clear();$('overlay').hidden=locked;$('crosshair').hidden=!locked;$('pause').hidden=!locked;$('status').textContent=locked?'CÂMERA CAPTURADA · SEM LIMITE HORIZONTAL':'PAUSADO';if(locked)started=true;$('start').textContent=started?'RETOMAR TESTE':'INICIAR TESTE';}
 function release(){keys.clear();if(document.pointerLockElement===canvas)document.exitPointerLock();}
 $('start').onclick=async()=>{if(!canvas.requestPointerLock){$('message').textContent='Este navegador não oferece captura do mouse. Abra o teste no Chrome ou Edge para PC.';return;}canvas.focus();try{await canvas.requestPointerLock();}catch{$('message').textContent='A captura não foi autorizada. Clique novamente em Retomar teste.';}};
@@ -29,7 +30,8 @@ function box(cx,cy,cz,w,h,d,color,angle=0){const c=Math.cos(angle),s=Math.sin(an
 function label(text,p,color='#edf2f7'){p=space(p);if(p[2]<.1)return;const q=project(p);ctx.font='bold 16px Arial';ctx.textAlign='center';ctx.fillStyle='#091c39e8';ctx.fillRect(q[0]-55,q[1]-20,110,28);ctx.fillStyle=color;ctx.fillText(text,...q);}
 function render(now){let dt=Math.min((now-previous)/1000,.05);previous=now;const dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;if(canvas.width!==Math.round(W*dpr)||canvas.height!==Math.round(H*dpr)){canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);}ctx.setTransform(dpr,0,0,dpr,0,0);F=Math.min(W,H)*.85;
  const sy=Math.sin(yaw),cy=Math.cos(yaw),sp=Math.sin(pitch),cp=Math.cos(pitch);if(locked){let a=Number(keys.has('KeyD'))-Number(keys.has('KeyA')),b=Number(keys.has('KeyW'))-Number(keys.has('KeyS')),n=Math.hypot(a,b)||1;const dx=(a*cy+b*sy)/n,dz=(-a*sy+b*cy)/n;const free=(px,pz)=>!objects.some(o=>Math.abs(px-o.p[0])<o.s[0]/2+.28&&Math.abs(pz-o.p[2])<o.s[2]/2+.28);let nx=Math.max(-9,Math.min(9,x+dx*dt*2)),nz=Math.max(-9,Math.min(9,z+dz*dt*2));if(free(nx,z))x=nx;if(free(x,nz))z=nz;if(a||b){const diff=Math.atan2(Math.sin(Math.atan2(dx,dz)-bodyYaw),Math.cos(Math.atan2(dx,dz)-bodyYaw));bodyYaw+=diff*Math.min(1,dt*12);}}
- cam=[x-sy*cp*3.2+cy*.75,1.45+sp*3.2,z-cy*cp*3.2-sy*.75];forward=[sy*cp,-sp,cy*cp];right=[cy,0,-sy];up=[sy*sp,cp,cy*sp];ctx.fillStyle='#183957';ctx.fillRect(0,0,W,H);
+ cameraDistance+=(targetDistance-cameraDistance)*(1-Math.exp(-10*dt));
+ cam=[x-sy*cp*cameraDistance+cy*.75,1.55,z-cy*cp*cameraDistance-sy*.75];forward=[sy*cp,-sp,cy*cp];right=[cy,0,-sy];up=[sy*sp,cp,cy*sp];ctx.fillStyle='#183957';ctx.fillRect(0,0,W,H);
  active=null;let hit=null,distance=100;for(const obj of objects){const t=rayBox(cam,forward,obj);if(t!==null&&t<distance){distance=t;hit=obj;}}
  let hint='Mire no painel e aproxime-se para interagir.';if(hit&&hit.interactive){const point=cam.map((v,i)=>v+forward[i]*distance),chest=[x,1.2,z],d=point.map((v,i)=>v-chest[i]),reach=Math.hypot(...d),direction=d.map(v=>v/(reach||1));const blocked=objects.some(o=>o!==hit&&rayBox(chest,direction,o)!==null&&rayBox(chest,direction,o)<reach-.02);if(reach<=2.7&&!blocked){active=hit;hint=hit.name+' · Clique ou [ E ] · '+(hit.on?'Desligar':'Ligar');}else hint=hit.name+' · Aproxime-se';}
  $('crosshair').classList.toggle('ready',!!active&&locked);$('dot').hidden=!!active;$('hand').toggleAttribute('hidden',!active);$('action').hidden=!locked;if(now>noticeUntil)$('action').textContent=hint;
