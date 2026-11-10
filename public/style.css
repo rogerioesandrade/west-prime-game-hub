@@ -9,3 +9,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 .simulator + .simulator{margin-top:28px}
+
+.brand-art{display:block;width:280px;max-width:42vw;height:auto;object-fit:contain}@media(max-width:600px){.brand-art{width:190px;max-width:55vw}}
