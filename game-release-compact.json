@@ -1,9 +1,9 @@
 {
-  "version": "2.1.3",
-  "tag": "nr13-compacto-v2.1.3",
-  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.3.zip",
-  "bytes": 113981619,
-  "sha256": "86d7109a297993eea29ae01ac250997a75e54c8a5cf69e12e793a7402d9c55f8",
+  "version": "2.1.4",
+  "tag": "nr13-compacto-v2.1.4",
+  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.4.zip",
+  "bytes": 114424716,
+  "sha256": "dca62b21b39ac3e982c662df462b7f6c56515417dcc74c67a58bf3e09fb485d1",
   "files": [
     {
       "path": "Creditos.txt",
@@ -12,23 +12,23 @@
     },
     {
       "path": "Desktop/Build/Desktop.data.unityweb",
-      "bytes": 51867077,
-      "sha256": "a77fed82ee1f3a2616969baca8d69f6850381ab06dc46e102b2704def650bf62"
+      "bytes": 51871886,
+      "sha256": "0a679205b8176ae20f384f2470a7e8c095f23a878d679e266d98f7d3cc7415e6"
     },
     {
       "path": "Desktop/Build/Desktop.framework.js.unityweb",
-      "bytes": 84491,
-      "sha256": "130a4fd75c5376acd3a0c3b66f5c787fca352122305a6a6bbabff57879c978b7"
+      "bytes": 84513,
+      "sha256": "f7b0434599a13be26b119cd562ea3652b81bbe03f7f5871c5ea4f5f8c7b7a134"
     },
     {
       "path": "Desktop/Build/Desktop.loader.js",
       "bytes": 48540,
-      "sha256": "33efdd50348a7466741a0dea3e5bee832d8f937106b95e3e820a446e38736961"
+      "sha256": "5d07bd229d83c5d9abc2c26bca5bf38cdf805eb53488294d04f8be2a6a646bf0"
     },
     {
       "path": "Desktop/Build/Desktop.wasm.unityweb",
-      "bytes": 11129461,
-      "sha256": "44cc7464d12d6d06c00ad4e4185c1ecc671a894662042442faece0186b0bbc12"
+      "bytes": 11133335,
+      "sha256": "114b4aab740bd3efe3ec73bed276f80d27391281ed7adeb0ba0972f2409178cb"
     },
     {
       "path": "favicon.svg",
@@ -37,43 +37,48 @@
     },
     {
       "path": "imsmanifest.xml",
-      "bytes": 1309,
-      "sha256": "8957af8ca1eea745e3cc817af52dad5e8ab945a79aad0cec4c1aa7262cf672c4"
+      "bytes": 1345,
+      "sha256": "2e5ef2528c48812554df7448e8e72a2f16a61f0971647b903d9fb7e71efe6024"
     },
     {
       "path": "index.html",
-      "bytes": 1915,
-      "sha256": "34a6ec0e4895635b4c92f16889dba8c1a61b9efdf68c54ab0396e2928bc08f78"
+      "bytes": 2141,
+      "sha256": "25dceacaf769ed34bcbfaa03abd98da64cab69575647a6b008c1048e8641cf3f"
+    },
+    {
+      "path": "locale.js",
+      "bytes": 5070,
+      "sha256": "8be0b37c2d6f18e00badaa55e68f49cbb1a25f67b9b9dc8e1b4b9b895b2606da"
     },
     {
       "path": "Mobile/Build/Mobile.data.unityweb",
-      "bytes": 40351228,
-      "sha256": "6eb969a623c4e5f362463f214d67d987e96b2b27454ba8692753e1b825170cdf"
+      "bytes": 40361436,
+      "sha256": "2af30812bce9b5460186e2429ae37968a55cd43a3b3c82c32969885820414d70"
     },
     {
       "path": "Mobile/Build/Mobile.framework.js.unityweb",
-      "bytes": 84491,
-      "sha256": "e9ce6e0638f23dd2ddae4753ceaec2302d77aa57cbcdfb39a2d5070e39c27bd7"
+      "bytes": 84513,
+      "sha256": "da4137347744a8c61f67198c6292949899ae187fede0bfae4f3b3e73cceb1a52"
     },
     {
       "path": "Mobile/Build/Mobile.loader.js",
       "bytes": 48540,
-      "sha256": "e3eb485a828838d5d99aab256547ede3d213e1be1579b5e4c19b788005774275"
+      "sha256": "06fcb5ffcbe469b4ad8c7a98570c70de63615184beb3f7c3bd5775d1015774e9"
     },
     {
       "path": "Mobile/Build/Mobile.wasm.unityweb",
-      "bytes": 11128969,
-      "sha256": "643262506bd04500ba4d8fa49ded4f1a78e6e843ca71a4a0a5e2d55ee5e35009"
+      "bytes": 11137127,
+      "sha256": "ecbeac0c82425f86214a169d9c2098bb6d9c589553aea144c3e121f903570929"
     },
     {
       "path": "release.css",
-      "bytes": 3497,
-      "sha256": "a1f986e63a0d0730c4d194e3cde89223f14f4f358574d7ed354b1e871d352e29"
+      "bytes": 4449,
+      "sha256": "a8841f33333cb2e1ddca5fffebe769a91e7c1f56f2318231c8da2e862c441d88"
     },
     {
       "path": "release.js",
-      "bytes": 7201,
-      "sha256": "1566b57b2dc5ace21d58e046a9fba63a6594761ea51a83e8ad21976ec4fa0d89"
+      "bytes": 8153,
+      "sha256": "dbd6a02a7bef0d2427067b81ebcc9214077565a7e035dd28bfe5be472c6e257a"
     },
     {
       "path": "scorm.js",
@@ -86,9 +91,9 @@
       "sha256": "8248b3bd78e2fd42f218ec2810b76c894a59fc4a427c217e838855a37589ac9a"
     },
     {
-      "path": "west-prime.webp",
-      "bytes": 12042,
-      "sha256": "32bf4c0c8067eed4f3b283770f5d19bcaac448c6a0957d1a77fe8bd72f6ebead"
+      "path": "west-prime-transparent.png",
+      "bytes": 490563,
+      "sha256": "cf6b341fd1cc8ccad2c3cdd90bf82635eb1a148a6b754fdc0319196a25a1613a"
     }
   ]
 }
