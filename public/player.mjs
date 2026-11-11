@@ -5,6 +5,7 @@ const key=compact?'west-prime:nr13-compacto:v2.1.0':'west-prime:nr13:v2.0.0';
 const $=id=>document.getElementById(id);
 let frame=null,runtime=null,timer=null,checking=false,pausedForLeave=false;
 function save(values){
+ if(compact){$("save-status").textContent="Sessão atual · progresso não salvo no navegador";$("restart").hidden=!["completed","passed"].includes(values["cmi.core.lesson_status"]);return;}
  try {localStorage.setItem(key,JSON.stringify({values,updatedAt:new Date().toISOString()}));}
  catch(error){$('save-status').textContent='Não foi possível salvar neste navegador';throw error;}
  const completed=['completed','passed'].includes(values['cmi.core.lesson_status']);
@@ -13,7 +14,7 @@ function save(values){
 }
 function prepareRuntime(reset=false){
  let values={};
- try {if(reset)localStorage.removeItem(key);else {const saved=JSON.parse(localStorage.getItem(key)||'null');if(saved?.values) values=Object.fromEntries(Object.entries(saved.values).filter(([k,v])=>k.startsWith('cmi.')&&typeof v==='string'));}}
+ try {if(reset||compact)localStorage.removeItem(key);else {const saved=JSON.parse(localStorage.getItem(key)||'null');if(saved?.values) values=Object.fromEntries(Object.entries(saved.values).filter(([k,v])=>k.startsWith('cmi.')&&typeof v==='string'));}}
  catch {$('save-status').textContent='Armazenamento indisponível neste navegador';}
  runtime=createScorm12Runtime(values,save);window.API=runtime.api;
  $('restart').hidden=!['completed','passed'].includes(values['cmi.core.lesson_status']);
@@ -21,7 +22,7 @@ function prepareRuntime(reset=false){
 async function check(){
  if(checking||frame)return;checking=true;clearTimeout(timer);$('retry').hidden=true;
  try {const response=await fetch(new URL(compact?'./nr13-compacto-ready.json':'./nr13-ready.json',import.meta.url),{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw new Error('Unavailable');const data=await response.json();if(!data.ready)throw new Error('Not ready');
-  frame=document.createElement('iframe');frame.src=new URL(compact?'./scorm/nr13-compacto/v2.1.2/index.html':'./scorm/nr13/v2.0.0/index.html',import.meta.url).href;frame.title='Simulador NR-13 — escolha celular ou computador';frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.addEventListener('load',()=>{$('loading').hidden=true});$('stage').append(frame);
+  frame=document.createElement('iframe');frame.src=new URL(compact?'./scorm/nr13-compacto/v2.1.3/index.html':'./scorm/nr13/v2.0.0/index.html',import.meta.url).href;frame.title='Simulador NR-13 — escolha celular ou computador';frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.addEventListener('load',()=>{$('loading').hidden=true});$('stage').append(frame);
  }catch {$('loading-message').textContent='O simulador ainda não está disponível. Tentando novamente…';$('retry').hidden=false;timer=setTimeout(check,10000);}
  finally{checking=false;}
 }
