@@ -1,9 +1,9 @@
 {
-  "version": "2.1.4",
-  "tag": "nr13-compacto-v2.1.4",
-  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.4.zip",
-  "bytes": 114424716,
-  "sha256": "dca62b21b39ac3e982c662df462b7f6c56515417dcc74c67a58bf3e09fb485d1",
+  "version": "2.1.5",
+  "tag": "nr13-compacto-v2.1.5",
+  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.5.zip",
+  "bytes": 112606791,
+  "sha256": "628bc8be5123df53b7d987d13b19649074a7709a566480a8eb5767dd17690ac3",
   "files": [
     {
       "path": "Creditos.txt",
@@ -12,23 +12,23 @@
     },
     {
       "path": "Desktop/Build/Desktop.data.unityweb",
-      "bytes": 51871886,
-      "sha256": "0a679205b8176ae20f384f2470a7e8c095f23a878d679e266d98f7d3cc7415e6"
+      "bytes": 50233741,
+      "sha256": "ab687e9c8fa65b6a6938cb11040346a031ea5830c6e523977a3f83e036421c2f"
     },
     {
       "path": "Desktop/Build/Desktop.framework.js.unityweb",
-      "bytes": 84513,
-      "sha256": "f7b0434599a13be26b119cd562ea3652b81bbe03f7f5871c5ea4f5f8c7b7a134"
+      "bytes": 84514,
+      "sha256": "ec4ebc81bfa11b0da12a43531f1c2fd29ff3bdf034a4e59e2ec46dfecbc79f9e"
     },
     {
       "path": "Desktop/Build/Desktop.loader.js",
       "bytes": 48540,
-      "sha256": "5d07bd229d83c5d9abc2c26bca5bf38cdf805eb53488294d04f8be2a6a646bf0"
+      "sha256": "3f2de9cdf7ffd0df1912f076b047b1e0077462c918e00e6322a713f9acb29703"
     },
     {
       "path": "Desktop/Build/Desktop.wasm.unityweb",
-      "bytes": 11133335,
-      "sha256": "114b4aab740bd3efe3ec73bed276f80d27391281ed7adeb0ba0972f2409178cb"
+      "bytes": 11144458,
+      "sha256": "2aed04b2251537794680d0d6d56ca32bb699e50aa190998ec803088c600bfb65"
     },
     {
       "path": "favicon.svg",
@@ -37,8 +37,8 @@
     },
     {
       "path": "imsmanifest.xml",
-      "bytes": 1345,
-      "sha256": "2e5ef2528c48812554df7448e8e72a2f16a61f0971647b903d9fb7e71efe6024"
+      "bytes": 1416,
+      "sha256": "936417a3e6567f4ba1d8e9db26723dbcfb138f0bb73b4d9927baab3be2b252dc"
     },
     {
       "path": "index.html",
@@ -47,28 +47,33 @@
     },
     {
       "path": "locale.js",
-      "bytes": 5070,
-      "sha256": "8be0b37c2d6f18e00badaa55e68f49cbb1a25f67b9b9dc8e1b4b9b895b2606da"
+      "bytes": 5099,
+      "sha256": "52ac95d4e844ab16d6fb0e50c8ff9b8013b18ca48b4d88021dc3374c97f59ea3"
     },
     {
       "path": "Mobile/Build/Mobile.data.unityweb",
-      "bytes": 40361436,
-      "sha256": "2af30812bce9b5460186e2429ae37968a55cd43a3b3c82c32969885820414d70"
+      "bytes": 40163700,
+      "sha256": "900d4760c22ad0f83e82ccc6ce5d11e74eca85bc001fa1fd28231045c41e0a6f"
     },
     {
       "path": "Mobile/Build/Mobile.framework.js.unityweb",
-      "bytes": 84513,
-      "sha256": "da4137347744a8c61f67198c6292949899ae187fede0bfae4f3b3e73cceb1a52"
+      "bytes": 84514,
+      "sha256": "9461729a5018286064d246cbc96a4343e442289dcf1505ab22fffd9db7429f91"
     },
     {
       "path": "Mobile/Build/Mobile.loader.js",
       "bytes": 48540,
-      "sha256": "06fcb5ffcbe469b4ad8c7a98570c70de63615184beb3f7c3bd5775d1015774e9"
+      "sha256": "f86b5325fabe70091bbf398150cb5de77aaa90e8f79439893557721e241e4116"
     },
     {
       "path": "Mobile/Build/Mobile.wasm.unityweb",
-      "bytes": 11137127,
-      "sha256": "ecbeac0c82425f86214a169d9c2098bb6d9c589553aea144c3e121f903570929"
+      "bytes": 11144655,
+      "sha256": "bd5a5ff2d58d51d07a316b6637e83f628d9837efaefa5c651ec99167497d123e"
+    },
+    {
+      "path": "Origem_R28.txt",
+      "bytes": 2916,
+      "sha256": "ed459dcd44aa961cc0d30b8507ac2536691b1d8ef76f97fde74b84d7eee733e8"
     },
     {
       "path": "release.css",
@@ -78,7 +83,12 @@
     {
       "path": "release.js",
       "bytes": 8153,
-      "sha256": "dbd6a02a7bef0d2427067b81ebcc9214077565a7e035dd28bfe5be472c6e257a"
+      "sha256": "5d0ed53ad93d12744c1f44a4a08924fc027b25eedb6cdcd5e428b861491bcf82"
+    },
+    {
+      "path": "release_origem_2.1.4.json",
+      "bytes": 3216,
+      "sha256": "1c9229a7215b1f79904af293b37aa7932f633befa0cd57f01b944219fb63e236"
     },
     {
       "path": "scorm.js",
