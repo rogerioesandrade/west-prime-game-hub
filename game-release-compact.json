@@ -1,9 +1,9 @@
 {
-  "version": "2.1.5",
-  "tag": "nr13-compacto-v2.1.5",
-  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.5.zip",
-  "bytes": 112606791,
-  "sha256": "628bc8be5123df53b7d987d13b19649074a7709a566480a8eb5767dd17690ac3",
+  "version": "2.1.6",
+  "tag": "nr13-compacto-v2.1.6",
+  "asset": "WG_NR13_COMPACTO_SCORM12_PC_SMARTPHONE_v2.1.6.zip",
+  "bytes": 113030779,
+  "sha256": "0e88eab0424c5165f5c8f4491dafa12883198713c6b714329368da373f1422a0",
   "files": [
     {
       "path": "Creditos.txt",
@@ -12,23 +12,23 @@
     },
     {
       "path": "Desktop/Build/Desktop.data.unityweb",
-      "bytes": 50233741,
-      "sha256": "ab687e9c8fa65b6a6938cb11040346a031ea5830c6e523977a3f83e036421c2f"
+      "bytes": 50697271,
+      "sha256": "ecb65d8e0c9c1ab34170a3a2d7eb755793d7612e2ee4c964bf7b6c81c39dd444"
     },
     {
       "path": "Desktop/Build/Desktop.framework.js.unityweb",
       "bytes": 84514,
-      "sha256": "ec4ebc81bfa11b0da12a43531f1c2fd29ff3bdf034a4e59e2ec46dfecbc79f9e"
+      "sha256": "bfd9fdfb5a8a5c03bcfe7863cdff87c3a79fc0af009449f7171b5bec401e9e18"
     },
     {
       "path": "Desktop/Build/Desktop.loader.js",
       "bytes": 48540,
-      "sha256": "3f2de9cdf7ffd0df1912f076b047b1e0077462c918e00e6322a713f9acb29703"
+      "sha256": "2a1dfabaad33915f55d34e5f39fe3a61d05fc36497b4ff6735ce274cffb77af3"
     },
     {
       "path": "Desktop/Build/Desktop.wasm.unityweb",
-      "bytes": 11144458,
-      "sha256": "2aed04b2251537794680d0d6d56ca32bb699e50aa190998ec803088c600bfb65"
+      "bytes": 11148550,
+      "sha256": "b9726b606ed16df897c33aa09eedf7ed75ab49fcb7bf6451b90563660720f30a"
     },
     {
       "path": "favicon.svg",
@@ -38,37 +38,37 @@
     {
       "path": "imsmanifest.xml",
       "bytes": 1416,
-      "sha256": "936417a3e6567f4ba1d8e9db26723dbcfb138f0bb73b4d9927baab3be2b252dc"
+      "sha256": "af2e21950cececacb9b37d7d8dec4f02fde0130c91ba91394cbc7c7359aada0f"
     },
     {
       "path": "index.html",
-      "bytes": 2141,
-      "sha256": "25dceacaf769ed34bcbfaa03abd98da64cab69575647a6b008c1048e8641cf3f"
+      "bytes": 2785,
+      "sha256": "bcdc45b363ef673ae3226e8d5cebb70f2e897bf35a6532e6950df0b072275f87"
     },
     {
       "path": "locale.js",
-      "bytes": 5099,
-      "sha256": "52ac95d4e844ab16d6fb0e50c8ff9b8013b18ca48b4d88021dc3374c97f59ea3"
+      "bytes": 4914,
+      "sha256": "15a277b7af7c8fe200aba353d5da6963f5e9bb1d6033272106ff5f84ac3a1af3"
     },
     {
       "path": "Mobile/Build/Mobile.data.unityweb",
-      "bytes": 40163700,
-      "sha256": "900d4760c22ad0f83e82ccc6ce5d11e74eca85bc001fa1fd28231045c41e0a6f"
+      "bytes": 40122653,
+      "sha256": "a688ecbfe90ac14748975c831f0efebfa5ad2c6575e08d7c060b0a5d8d78be7d"
     },
     {
       "path": "Mobile/Build/Mobile.framework.js.unityweb",
       "bytes": 84514,
-      "sha256": "9461729a5018286064d246cbc96a4343e442289dcf1505ab22fffd9db7429f91"
+      "sha256": "cc4352b8d23929b5e60e56e5e4c38f71266c8b2ad93fff753647fdec36948bf1"
     },
     {
       "path": "Mobile/Build/Mobile.loader.js",
       "bytes": 48540,
-      "sha256": "f86b5325fabe70091bbf398150cb5de77aaa90e8f79439893557721e241e4116"
+      "sha256": "8d24dff25d069cfe9419dfc46ec1f167a1f51be31687cc3a63f6a09a205e7b2b"
     },
     {
       "path": "Mobile/Build/Mobile.wasm.unityweb",
-      "bytes": 11144655,
-      "sha256": "bd5a5ff2d58d51d07a316b6637e83f628d9837efaefa5c651ec99167497d123e"
+      "bytes": 11149531,
+      "sha256": "95a597aaee38901e091752604975e04967172e63ad7e670e315fe75d8eb1ccf0"
     },
     {
       "path": "Origem_R28.txt",
@@ -77,18 +77,18 @@
     },
     {
       "path": "release.css",
-      "bytes": 4449,
-      "sha256": "a8841f33333cb2e1ddca5fffebe769a91e7c1f56f2318231c8da2e862c441d88"
+      "bytes": 7596,
+      "sha256": "4d6555235c6b08e4e0ab5a15cab8fbce037dec70320e44579203f468f66bf588"
     },
     {
       "path": "release.js",
-      "bytes": 8153,
-      "sha256": "5d0ed53ad93d12744c1f44a4a08924fc027b25eedb6cdcd5e428b861491bcf82"
+      "bytes": 8588,
+      "sha256": "ac129052ca24baa4c7c4b2499de0387ac78b4b0857c8fd91f9c21fb0f62fe3a0"
     },
     {
       "path": "release_origem_2.1.4.json",
       "bytes": 3216,
-      "sha256": "1c9229a7215b1f79904af293b37aa7932f633befa0cd57f01b944219fb63e236"
+      "sha256": "175b48a3b394ec6cd15eb61f1aeaa78eac9b4f68776249223b417e000011bbd5"
     },
     {
       "path": "scorm.js",
